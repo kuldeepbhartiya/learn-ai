@@ -159,3 +159,50 @@ git branch -a
 11. Verify Your Staged Changes (Optional but Recommended):
 git status
 This will show you files that are staged for commit under the "Changes to be committed" section. It will also show you unstaged changes.
+```
+
+## `git fetch` - Retrieving Remote Changes
+
+**Purpose:**
+Downloads commits and objects from a remote repository into your local repository's remote-tracking branches (e.g., `origin/main`, `origin/develop`). It retrieves the history and metadata without automatically integrating the changes into your local working branches.
+
+**Key Aspects:**
+* Downloads objects (commits and files) from the remote.
+* Updates remote-tracking branches to reflect the remote's state.
+* Does **not** modify your local working branches automatically.
+* Safe operation for reviewing remote changes.
+
+**Common Usage:**
+```bash
+git fetch <remote_name>
+e.g. git fetch origin
+```
+# Other helpful git commands
+```
+Steps to Resolve:
+1. Identify Conflicted Files: Use git status to see "Unmerged paths".
+
+Bash
+git status
+
+2. Open Conflicted Files: Look for conflict markers:
+
+<<<<<<< HEAD
+Your changes
+=======
+Incoming changes
+>>>>>>> <branch_name>
+
+3. Manually Resolve Conflicts:
+Edit the file to keep the desired changes.
+Remove the conflict markers (<<<<<<<, =======, >>>>>>>).
+
+4. Stage Resolved Files:
+git add <resolved_file>
+
+5. Commit the merge
+git commit -m "Merge branch '<branch_name>' and resolve conflicts"
+
+6. Abort the merge
+git merge --abort
+
