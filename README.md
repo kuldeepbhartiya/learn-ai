@@ -92,7 +92,7 @@ print(response)
 ```
 
 # Python packages to install
-pip install langchain-google-genai
+pip install langchain-google-genai  
 pip install python-dotenv
 
 # Basic git usage
