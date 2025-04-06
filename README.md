@@ -95,6 +95,18 @@ print(response)
 pip install langchain-google-genai
 pip install python-dotenv
 
+======================================================================
+
+# get-model-list.py
+
+# Python packages to install
+pip install google-generativeai  
+pip install python-dotenv
+
+This python code file basicall list all the available models for usage that is associated with your GOOGLE_API_KEY
+
+
+
 # Basic git usage
 ```
 1. Initialize a Git repository (if you haven't already):

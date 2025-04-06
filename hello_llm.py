@@ -32,3 +32,4 @@ llm = ChatGoogleGenerativeAI(
 # In this case, the prompt is "Hello, from Google Generative AI!".
 response = llm.invoke("Hello, How are your, please Introduce yourself!")
 print(response)  # Print the response from the model
+
